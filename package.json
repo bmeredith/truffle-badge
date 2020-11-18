@@ -10,5 +10,9 @@
     "test": "truffle test"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.2.0",
+    "@openzeppelin/test-environment": "^0.1.6"
+  }
 }
