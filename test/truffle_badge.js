@@ -9,11 +9,14 @@ contract("TruffleBadge", function(accounts) {
 
   describe("Creation", () => {
     it("award badge", async () => {
-      await badge.awardBadge(accounts[1]);
+      const meta = "META";
+      await badge.awardBadge(accounts[1], meta);
       assert.equal(
         await badge.balanceOf(accounts[1]),
         1
       );
+
+      await badge.awardBadge(accounts[2], meta);
     });
   });
 });
