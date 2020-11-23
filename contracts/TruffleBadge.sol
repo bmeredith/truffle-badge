@@ -43,11 +43,11 @@ contract TruffleBadge is ERC721 {
         return;
     }
 
-    function _getBadge(address attendee) private returns (uint256) {
+    function _getBadge(address attendee) private view returns (uint256) {
         return badgeIds[attendee];
     }
 
-    function _hasBadge(address attendee) private returns (bool) {
+    function _hasBadge(address attendee) private view returns (bool) {
         return balanceOf(attendee) > 0;
     }
 }
